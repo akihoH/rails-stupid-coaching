@@ -1,0 +1,16 @@
+<div style="background-color: white; padding-left: 20px; border-left: 3px solid gray;">
+<%= @answer %>
+<p><em>-You</em></p>
+</div>
+
+<div style="background-color: #FFFDD0; padding-left: 10px; border-left: 3px solid gray;">
+<% if @answer == 'I am going to work' %>
+<p>Great!</p>
+<% elsif @answer.include? "?" %>
+<p>Silly question, get dressed and go to work!</p>
+<% else%>
+<p>I don't care, get dressed and go to work!</p>
+<% end %>
+<p><em>-Your coach</em></p>
+</div>
+<%= link_to "Ask a new question", root_path %>
